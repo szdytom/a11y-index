@@ -15,6 +15,11 @@
   --green:      #0F4F48;
   --green-soft: #E2EDEA;
 
+  /* 荧光笔笔痕。深色模式下会被覆盖成半透明琥珀：
+     笔痕让标题字同时坐在「背景」和「笔痕」两种底色上，
+     必须保证字色对两者都达标，因此两种模式各自定一套。 */
+  --pen:        #E9A800;
+
   --f-display: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --f-body:    "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --f-mono:    ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", "Noto Sans Mono CJK SC", monospace;
@@ -124,10 +129,19 @@ h1 {
 }
 h1 em {
   font-style: normal;
-  /* 黄底墨字：对比度 8.2:1，同时呼应盲道块 */
-  background: var(--yellow);
   color: var(--ink);
-  padding: 0 0.16em 0.06em;
+  /* 荧光笔效果：只给下半字着色，笔痕完整落在行框内。
+     不用 background-color —— 内联元素的背景会覆盖整个字体内容区
+     （约 1.7em），而行高只有 0.98em，会向上溢出去盖住上一行。
+     改用渐变精确控制笔痕的起止位置。 */
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0 46%,
+    var(--pen) 46% 100%
+  );
+  /* 让笔痕在左右两端各外扩一点，更像划过的一笔 */
+  padding: 0 0.12em;
+  margin: 0 -0.12em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
@@ -573,7 +587,8 @@ input::placeholder { color: var(--graphite); opacity: 1; }
 @media (forced-colors: active) {
   .console { box-shadow: none; border-color: CanvasText; }
   .masthead { background-image: none; }
-  h1 em { background: Canvas; color: CanvasText; text-decoration: underline; text-decoration-thickness: 4px; }
+  /* 强制颜色下渐变不可靠，改用下划线表达强调 */
+  h1 em { background-image: none; color: CanvasText; text-decoration: underline; text-decoration-thickness: 4px; }
   .eyebrow { color: CanvasText; }
   .eyebrow::before { background: ButtonText; }
   .lede { color: CanvasText; }
@@ -661,8 +676,10 @@ input::placeholder { color: var(--graphite); opacity: 1; }
     --green:      #6FD3C4;
     --green-soft: #14201F;
     --shadow:     none;
+    /* 笔痕不能用实心黄：浅色标题字压在满黄上只有 1.83:1，读不了。
+       半透明琥珀既看得出是一道笔痕，又把字色对比度保在 7.0:1。 */
+    --pen:        rgba(233, 168, 0, 0.42);
   }
-  h1 em { color: #171B1D; }
   .console__sub { color: #A8AFAF; }
   .console__h { background: #2A3236; color: #F1F0EB; border-color: var(--line); }
   /* 与浅色模式对称：选中 = 纸底墨字。黄色只留给 h1 和引导条，不做大面积铺陈 */
