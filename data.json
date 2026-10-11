@@ -1,0 +1,841 @@
+{
+  "generated": "2026-10-11",
+  "note": "星标数与最近推送时间为 2026-10-11 的 GitHub 公开 API 快照；非 GitHub 项目仅有官方链接。",
+  "categories": [
+    {
+      "name": "开发工具链",
+      "blurb": "在你提交代码之前，先把无障碍缺陷找出来。",
+      "projects": [
+        {
+          "name": "axe-core",
+          "repo": "dequelabs/axe-core",
+          "stars": 7624,
+          "lang": "HTML",
+          "license": "MPL-2.0",
+          "pushed": "2026-10-09",
+          "desc": "自动化无障碍规则引擎，几乎所有 a11y 测试工具的地基。",
+          "why": "浏览器扩展、Jest、Cypress、Playwright 底层跑的都是它。",
+          "pick": true
+        },
+        {
+          "name": "Pa11y",
+          "repo": "pa11y/pa11y",
+          "stars": 4573,
+          "lang": "JavaScript",
+          "license": "LGPL-3.0",
+          "pushed": "2026-09-28",
+          "desc": "命令行无障碍扫描器，一行命令扫一个网址，自带 dashboard。",
+          "url": "https://pa11y.org/"
+        },
+        {
+          "name": "Lighthouse",
+          "repo": "GoogleChrome/lighthouse",
+          "stars": 30879,
+          "lang": "JavaScript",
+          "license": "Apache-2.0",
+          "pushed": "2026-10-10",
+          "desc": "Chrome 内置的审计引擎，Accessibility 只是其中一项。",
+          "why": "按 F12 就能跑，上手成本为零——大部分人的第一个无障碍工具。",
+          "pick": true
+        },
+        {
+          "name": "IBM Equal Access",
+          "repo": "IBMa/equal-access",
+          "stars": 783,
+          "lang": "JavaScript",
+          "license": "Apache-2.0",
+          "pushed": "2026-09-28",
+          "desc": "IBM 的规则引擎 + 浏览器扩展 + CI 检查器，覆盖 WCAG 2.2 与 Section 508。"
+        },
+        {
+          "name": "Accessibility Insights for Web",
+          "repo": "microsoft/accessibility-insights-web",
+          "stars": 956,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-10-03",
+          "desc": "微软的浏览器扩展，axe 规则加手把手的「快速检查 / 评估」流程。",
+          "url": "https://accessibilityinsights.io/"
+        },
+        {
+          "name": "eslint-plugin-jsx-a11y",
+          "repo": "jsx-eslint/eslint-plugin-jsx-a11y",
+          "stars": 3623,
+          "lang": "JavaScript",
+          "license": "MIT",
+          "pushed": "2026-01-06",
+          "desc": "把 a11y 违规挡在提交之前的 JSX 静态检查插件。"
+        },
+        {
+          "name": "Guidepup",
+          "repo": "guidepup/guidepup",
+          "stars": 572,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-10-10",
+          "desc": "用代码驱动真实的 NVDA / VoiceOver，把屏幕阅读器实际念出的内容写进自动化测试。",
+          "why": "不模拟 ARIA，而是真的去驱动读屏器——目前唯一一条能验证「实际听见什么」的路子。",
+          "url": "https://www.guidepup.dev/",
+          "pick": true
+        },
+        {
+          "name": "AccessKit",
+          "repo": "AccessKit/accesskit",
+          "stars": 1543,
+          "lang": "Rust",
+          "license": "BSD-3-Clause",
+          "pushed": "2026-10-04",
+          "desc": "一套 Rust API 把无障碍树接到 Windows UIA / macOS / Linux AT-SPI，让自绘 UI 天生可访问。",
+          "why": "从底层解决问题：egui、Bevy、Slint 这类自绘框架靠它一次性拿到全平台读屏支持。",
+          "url": "https://accesskit.dev/",
+          "pick": true
+        },
+        {
+          "name": "ARIA DevTools",
+          "repo": "ziolko/aria-devtools",
+          "stars": 604,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-06-15",
+          "desc": "Chrome 扩展，把网页重绘成「屏幕阅读器眼中的样子」。",
+          "why": "缺失的 label、错用的 role、键盘不可达的控件，一眼就看得见。",
+          "pick": true
+        },
+        {
+          "name": "Sa11y",
+          "repo": "ryersondmp/sa11y",
+          "stars": 333,
+          "lang": "JavaScript",
+          "pushed": "2026-10-08",
+          "desc": "能嵌进页面的可视化检查器，错误就地高亮并给修复提示。",
+          "why": "少数面向内容作者而不是工程师的工具，适合 CMS 与富文本环境。",
+          "url": "https://sa11y.netlify.app/"
+        },
+        {
+          "name": "tota11y",
+          "repo": "jdan/tota11y",
+          "stars": 5064,
+          "lang": "JavaScript",
+          "license": "MIT",
+          "pushed": "2023-09-11",
+          "desc": "Khan Academy 出品的可视化标注工具，把标题层级、对比度、landmark 逐项画在页面上。",
+          "why": "2023 年后基本停更，当作教学与启发工具看。",
+          "url": "https://khan.github.io/tota11y/"
+        }
+      ]
+    },
+    {
+      "name": "组件库与设计系统",
+      "blurb": "无障碍行为已经写好了，你只需要管好看。",
+      "projects": [
+        {
+          "name": "Radix Primitives",
+          "repo": "radix-ui/primitives",
+          "stars": 19379,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-10-09",
+          "desc": "无样式、WAI-ARIA 行为完整的低层 React 组件基元。",
+          "url": "https://www.radix-ui.com/primitives"
+        },
+        {
+          "name": "React Aria",
+          "repo": "adobe/react-spectrum",
+          "stars": 15934,
+          "lang": "TypeScript",
+          "license": "Apache-2.0",
+          "pushed": "2026-10-09",
+          "desc": "Adobe 的 a11y 优先 hooks 与组件集，覆盖大量冷门交互模式。",
+          "why": "日期选择、拖放、表格这类很难做对的东西，这里有完整实现可以参考实现思路。",
+          "url": "https://react-spectrum.adobe.com/",
+          "pick": true
+        },
+        {
+          "name": "Base UI",
+          "repo": "mui/base-ui",
+          "stars": 11127,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-10-10",
+          "desc": "Radix、Floating UI、MUI 三拨作者合流做的无样式可访问组件。",
+          "why": "新一代里最值得盯的一个，键盘交互是设计前提而不是事后补丁。",
+          "url": "https://base-ui.com/",
+          "pick": true
+        },
+        {
+          "name": "Ariakit",
+          "repo": "ariakit/ariakit",
+          "stars": 8624,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-10-11",
+          "desc": "组件、样式与示例一体的可访问组件工具包。",
+          "url": "https://ariakit.com/"
+        },
+        {
+          "name": "Radix Themes",
+          "repo": "radix-ui/themes",
+          "stars": 8761,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-04-11",
+          "desc": "在 Primitives 之上的一层成品主题，开箱即用且默认达标。",
+          "url": "https://www.radix-ui.com/themes"
+        },
+        {
+          "name": "Headless UI",
+          "repo": "tailwindlabs/headlessui",
+          "stars": 28772,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-04-13",
+          "desc": "Tailwind 官方出的无样式组件，与 Tailwind 无缝配合。",
+          "url": "https://headlessui.com/"
+        },
+        {
+          "name": "GOV.UK Frontend",
+          "repo": "alphagov/govuk-frontend",
+          "stars": 1468,
+          "lang": "JavaScript",
+          "license": "MIT",
+          "pushed": "2026-10-09",
+          "desc": "英国政府设计系统的生产实现，无障碍记录极硬。",
+          "why": "面向公共服务，被真实审计锤了很多年，是「经得起查」的样本。",
+          "url": "https://frontend.design-system.service.gov.uk/"
+        },
+        {
+          "name": "USWDS",
+          "repo": "uswds/uswds",
+          "stars": 7218,
+          "lang": "JavaScript",
+          "pushed": "2026-10-09",
+          "desc": "美国政府 Web 设计系统，面向联邦站点有强制性无障碍要求。",
+          "url": "https://designsystem.digital.gov/"
+        }
+      ]
+    },
+    {
+      "name": "屏幕阅读器与阅读辅助",
+      "blurb": "把屏幕上的字变成声音和凸点。",
+      "projects": [
+        {
+          "name": "NVDA",
+          "repo": "nvaccess/nvda",
+          "stars": 2655,
+          "lang": "Python",
+          "license": "GPL-2.0",
+          "pushed": "2026-10-09",
+          "desc": "免费开源的 Windows 屏幕阅读器，全世界视障用户的主力工具。",
+          "why": "中文支持是一等公民，中文翻译社区常年活跃。",
+          "url": "https://www.nvaccess.org/",
+          "pick": true
+        },
+        {
+          "name": "Orca",
+          "repo": "GNOME/orca",
+          "stars": 146,
+          "lang": "Python",
+          "license": "LGPL-2.1",
+          "pushed": "2026-10-10",
+          "desc": "GNOME 官方屏幕阅读器与放大镜，主流 Linux 发行版可直接装。",
+          "url": "https://gitlab.gnome.org/GNOME/orca"
+        },
+        {
+          "name": "Odilia",
+          "repo": "odilia-app/odilia",
+          "stars": 172,
+          "lang": "Rust",
+          "license": "MIT",
+          "pushed": "2026-05-28",
+          "desc": "用 Rust 从零重写的下一代 Linux 屏幕阅读器，走 AT-SPI2 + AccessKit 新栈。",
+          "why": "绕开 Orca 的 Python 性能包袱，是观察 Linux 无障碍基础设施走向的窗口。",
+          "url": "https://odilia.app",
+          "pick": true
+        },
+        {
+          "name": "MathCAT",
+          "repo": "daisy/MathCAT",
+          "stars": 121,
+          "lang": "Rust",
+          "license": "MIT",
+          "pushed": "2026-10-07",
+          "desc": "把数学公式转成可朗读语音的引擎（MathML 转语音），NVDA 等都在用。",
+          "why": "数学是读屏器最难啃的一块，这个项目把它变成了可复用组件。",
+          "pick": true
+        },
+        {
+          "name": "TalkBack",
+          "repo": "google/talkback",
+          "stars": 518,
+          "lang": "Java",
+          "license": "Apache-2.0",
+          "pushed": "2026-04-01",
+          "desc": "Android TalkBack 的开源实现（AOSP 系），可以自行构建。"
+        },
+        {
+          "name": "BRLTTY",
+          "repo": "brltty/brltty",
+          "stars": 124,
+          "lang": "C",
+          "license": "LGPL-2.1",
+          "pushed": "2026-10-05",
+          "desc": "盲文点显器驱动加屏幕阅读器，Linux / Android / Windows 通用。",
+          "url": "https://mielke.cc/brltty/"
+        },
+        {
+          "name": "liblouis",
+          "repo": "liblouis/liblouis",
+          "stars": 348,
+          "lang": "C",
+          "license": "LGPL-2.1",
+          "pushed": "2026-10-01",
+          "desc": "盲文转译与回译引擎，支持上百种语言和盲文表。",
+          "url": "http://liblouis.io"
+        },
+        {
+          "name": "BrailleBlaster",
+          "repo": "aphtech/brailleblaster",
+          "stars": 15,
+          "lang": "Kotlin",
+          "license": "GPL-3.0",
+          "pushed": "2026-10-08",
+          "desc": "面向教材与出版级的盲文排版软件。",
+          "url": "https://www.brailleblaster.org/"
+        },
+        {
+          "name": "Fenrir",
+          "repo": "chrys87/fenrir",
+          "stars": 58,
+          "lang": "Python",
+          "license": "LGPL-3.0",
+          "pushed": "2026-09-30",
+          "desc": "纯 TTY 环境下的 Linux 屏幕阅读器，没有图形界面也能读终端。",
+          "why": "服务器救援、无桌面的场景里，它可能是唯一的出路。"
+        }
+      ]
+    },
+    {
+      "name": "语音合成与听觉",
+      "blurb": "让机器说话，而且要说得离线、说得便宜、说得像人。",
+      "projects": [
+        {
+          "name": "Piper",
+          "repo": "OHF-Voice/piper1-gpl",
+          "stars": 5822,
+          "lang": "C++",
+          "license": "GPL-3.0",
+          "pushed": "2026-10-11",
+          "desc": "本地低延迟神经语音合成，专为树莓派和离线场景设计。",
+          "why": "延迟低到能在树莓派 4 上给屏幕阅读器实时配音，音质远超传统合成器。",
+          "url": "https://rhasspy.github.io/piper-samples/",
+          "pick": true
+        },
+        {
+          "name": "Kokoro",
+          "repo": "hexgrad/kokoro",
+          "stars": 9245,
+          "lang": "JavaScript",
+          "license": "Apache-2.0",
+          "pushed": "2025-08-06",
+          "desc": "只有 82M 参数，音质却接近商用大模型，CPU 就能跑。",
+          "why": "资源受限设备上做语音播报的性价比之王，ONNX 移植齐全。",
+          "url": "https://huggingface.co/hexgrad/Kokoro-82M",
+          "pick": true
+        },
+        {
+          "name": "sherpa-onnx",
+          "repo": "k2-fsa/sherpa-onnx",
+          "stars": 15212,
+          "lang": "C++",
+          "license": "Apache-2.0",
+          "pushed": "2026-10-09",
+          "desc": "端侧 ASR / TTS / VAD / 说话人分离全家桶，不联网、不依赖 PyTorch。",
+          "why": "一套 C++ 核心跑遍 Android、iOS、鸿蒙、树莓派、RISC-V，还有 12 种语言绑定。",
+          "url": "https://k2-fsa.github.io/sherpa/onnx/index.html",
+          "pick": true
+        },
+        {
+          "name": "eSpeak NG",
+          "repo": "espeak-ng/espeak-ng",
+          "stars": 6932,
+          "lang": "C",
+          "license": "GPL-3.0",
+          "pushed": "2026-09-22",
+          "desc": "超轻量共振峰合成器，100 多种语言与口音，小到能跑在单片机上。",
+          "url": "https://espeak-ng.github.io/"
+        },
+        {
+          "name": "RHVoice",
+          "repo": "RHVoice/RHVoice",
+          "stars": 1847,
+          "lang": "C++",
+          "license": "GPL-2.0",
+          "pushed": "2026-09-28",
+          "desc": "多语言高质量开源语音合成，带 Windows SAPI 与 NVDA 插件。",
+          "url": "https://rhvoice.org"
+        },
+        {
+          "name": "Speech Dispatcher",
+          "repo": "brailcom/speechd",
+          "stars": 332,
+          "lang": "C",
+          "license": "GPL-2.0",
+          "pushed": "2026-10-08",
+          "desc": "应用与各种语音引擎之间的统一抽象层，多数 Linux 发行版预装。"
+        },
+        {
+          "name": "openMHA",
+          "repo": "HoerTech-gGmbH/openMHA",
+          "stars": 335,
+          "lang": "C",
+          "license": "AGPL-3.0",
+          "pushed": "2026-08-05",
+          "desc": "开源主助听器（Master Hearing Aid）实时处理平台，助听器算法研究的基线。",
+          "why": "把被厂商垄断的助听器算法领域做成了可编程平台，研究者能直接在上面跑自研降噪与增益策略。",
+          "pick": true
+        },
+        {
+          "name": "LiveCaptions",
+          "repo": "abb128/LiveCaptions",
+          "stars": 1800,
+          "lang": "C",
+          "license": "GPL-3.0",
+          "pushed": "2025-02-27",
+          "desc": "Linux 桌面实时字幕条，本地 Whisper 推理，音频不出本机。",
+          "why": "任意应用上都能用：会议、视频、播客，一律实时出字幕。",
+          "pick": true
+        },
+        {
+          "name": "Speech Note",
+          "repo": "mkiol/dsnote",
+          "stars": 1686,
+          "lang": "C++",
+          "license": "MPL-2.0",
+          "pushed": "2026-10-10",
+          "desc": "完全离线的语音转写、朗读与翻译笔记应用，Flatpak 安装。"
+        }
+      ]
+    },
+    {
+      "name": "语音转写与字幕",
+      "blurb": "把说出来的话，立刻变成能读的文字。",
+      "projects": [
+        {
+          "name": "whisper.cpp",
+          "repo": "ggml-org/whisper.cpp",
+          "stars": 54249,
+          "lang": "C++",
+          "license": "MIT",
+          "pushed": "2026-10-06",
+          "desc": "Whisper 的 C/C++ 移植，端侧实时转写的事实标准。"
+        },
+        {
+          "name": "Handy",
+          "repo": "cjpais/Handy",
+          "stars": 33470,
+          "lang": "Rust",
+          "license": "MIT",
+          "pushed": "2026-10-10",
+          "desc": "纯离线的跨平台听写应用，按热键就能把话变成任意应用里的文字。",
+          "why": "Rust + Tauri 写的小工具，不上传音频，长时间打字的行动不便用户最该试。",
+          "url": "https://handy.computer",
+          "pick": true
+        },
+        {
+          "name": "faster-whisper",
+          "repo": "SYSTRAN/faster-whisper",
+          "stars": 25806,
+          "lang": "Python",
+          "license": "MIT",
+          "pushed": "2026-10-10",
+          "desc": "基于 CTranslate2 的加速 Whisper，同精度下快数倍。"
+        },
+        {
+          "name": "WhisperLiveKit",
+          "repo": "QuentinFuxa/WhisperLiveKit",
+          "stars": 11121,
+          "lang": "Python",
+          "license": "Apache-2.0",
+          "pushed": "2026-10-01",
+          "desc": "实时流式转写加说话人分离加翻译，可直接吐 OpenAI / Deepgram 兼容接口。",
+          "why": "给听障会议、课堂自建实时字幕，两条命令就能起一个 WebSocket 服务。",
+          "pick": true
+        },
+        {
+          "name": "Subtitle Edit",
+          "repo": "SubtitleEdit/subtitleedit",
+          "stars": 14432,
+          "lang": "C#",
+          "license": "GPL-3.0",
+          "pushed": "2026-10-05",
+          "desc": "字幕编辑器，内置 Whisper 与 Tesseract 自动转写，听障字幕工作流的主力工具。",
+          "why": "API 元数据把许可证标成 MIT，仓库内 LICENSE 是 GPL-3.0，使用前请以仓库为准。"
+        }
+      ]
+    },
+    {
+      "name": "视觉与 OCR 辅助",
+      "blurb": "把「看见」这件事，变成能被听见的信息。",
+      "projects": [
+        {
+          "name": "world-reader 世界阅读器",
+          "repo": "szdytom/world-reader",
+          "stars": 0,
+          "lang": "TypeScript",
+          "pushed": "2026-10-11",
+          "desc": "手机摄像头实时做 YOLO 实例分割加中文 OCR，再用语音自动朗读眼前的世界。",
+          "url": "https://szdytom.github.io/world-reader/"
+        },
+        {
+          "name": "Tesseract",
+          "repo": "tesseract-ocr/tesseract",
+          "stars": 76873,
+          "lang": "C++",
+          "license": "Apache-2.0",
+          "pushed": "2026-10-08",
+          "desc": "老牌开源 OCR 引擎，视障阅读软件的通用底座。"
+        },
+        {
+          "name": "PaddleOCR",
+          "repo": "PaddlePaddle/PaddleOCR",
+          "stars": 90659,
+          "lang": "Python",
+          "license": "Apache-2.0",
+          "pushed": "2026-09-16",
+          "desc": "轻量多语言 OCR，覆盖 100 多种语言，中文场景表现最强。",
+          "why": "中国团队（百度）出品，中文识别几乎不用再挑别的。"
+        },
+        {
+          "name": "opendataloader-pdf",
+          "repo": "opendataloader-project/opendataloader-pdf",
+          "stars": 29523,
+          "lang": "Java",
+          "license": "Apache-2.0",
+          "pushed": "2026-10-09",
+          "desc": "把 PDF 解析成带结构的无障碍数据，服务 PDF/UA 与 RAG。",
+          "why": "PDF 是视障用户面前最高的一堵墙之一，它专门来拆这堵墙。",
+          "url": "https://opendataloader.org",
+          "pick": true
+        },
+        {
+          "name": "VisionVoice 视界之声",
+          "repo": "PineappleSnowy/VisionVoice",
+          "stars": 29,
+          "lang": "JavaScript",
+          "license": "Apache-2.0",
+          "pushed": "2026-06-03",
+          "desc": "中国开发者做的视障智能助手：相册阅读、环境描述、寻物、避障、知识问答。",
+          "why": "个人项目、体量小，但功能拼得相当完整，还有线上站点。",
+          "url": "https://visionvoice.cn"
+        },
+        {
+          "name": "neverclick",
+          "repo": "LazoVelko/neverclick",
+          "stars": 475,
+          "pushed": "2026-09-10",
+          "desc": "用本地计算机视觉做键盘驱动的鼠标控制，完全不依赖手部操作。"
+        },
+        {
+          "name": "righthand",
+          "repo": "tmc/righthand",
+          "stars": 116,
+          "lang": "Go",
+          "pushed": "2025-01-14",
+          "desc": "macOS 上的免手操作助手，用大模型把口语指令翻译成系统操作。",
+          "why": "2025 年初后未再更新，当作思路参考。"
+        }
+      ]
+    },
+    {
+      "name": "替代输入与沟通",
+      "blurb": "手不能动、口不能言的时候，还有别的路。",
+      "projects": [
+        {
+          "name": "OptiKey",
+          "repo": "OptiKey/OptiKey",
+          "stars": 4425,
+          "lang": "C#",
+          "license": "GPL-3.0",
+          "pushed": "2026-09-03",
+          "desc": "只用眼睛完成打字、说话和控制整台电脑，面向 ALS / MND 用户。",
+          "why": "有可直接下载的安装包，是少数真正落地多年的开源眼控软件。",
+          "url": "http://www.optikey.org",
+          "pick": true
+        },
+        {
+          "name": "AsTeRICS Grid",
+          "repo": "asterics/Asterics-AAC",
+          "stars": 126,
+          "lang": "JavaScript",
+          "license": "AGPL-3.0",
+          "pushed": "2026-10-09",
+          "desc": "免费 AAC 应用，支持眼动、开关、扫描等多种输入，还能接智能家居。",
+          "why": "纯浏览器 PWA、离线可用，家长和康复师零安装就能上手。",
+          "pick": true
+        },
+        {
+          "name": "Cboard",
+          "repo": "cboard-org/cboard",
+          "stars": 761,
+          "lang": "JavaScript",
+          "license": "GPL-3.0",
+          "pushed": "2026-10-05",
+          "desc": "浏览器端 AAC 沟通板，符号加语音合成，PWA 可离线。",
+          "url": "https://www.cboard.io"
+        },
+        {
+          "name": "CtrlAssist",
+          "repo": "ruffsl/CtrlAssist",
+          "stars": 88,
+          "lang": "Rust",
+          "license": "Apache-2.0",
+          "pushed": "2026-08-16",
+          "desc": "把游戏手柄变成鼠标键盘的 Linux 辅助层，让更多人能玩游戏。"
+        },
+        {
+          "name": "eViacam",
+          "repo": "cmauri/eviacam",
+          "stars": 174,
+          "lang": "C++",
+          "license": "GPL-3.0",
+          "pushed": "2023-02-22",
+          "desc": "用普通摄像头做头部追踪的鼠标模拟器。",
+          "why": "2023 年起停更，但仍是同类里最好上手的参考实现。"
+        },
+        {
+          "name": "sign-language-translator",
+          "repo": "sign-language-translator/sign-language-translator",
+          "stars": 376,
+          "lang": "Python",
+          "license": "Apache-2.0",
+          "pushed": "2024-09-23",
+          "desc": "手语与文本互译的 Python 框架。",
+          "why": "2024 年后更新放缓，但仍是少数真能跑起来的手语翻译开源实现。"
+        }
+      ]
+    },
+    {
+      "name": "色彩与排版",
+      "blurb": "对比度、色觉、字体——设计里最容易翻车的那部分。",
+      "projects": [
+        {
+          "name": "Dark Reader",
+          "repo": "darkreader/darkreader",
+          "stars": 22454,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-10-09",
+          "desc": "给任何网站生成深色主题，为畏光与视觉疲劳用户而做。",
+          "url": "https://darkreader.org/"
+        },
+        {
+          "name": "a11y.css",
+          "repo": "ffoodd/a11y.css",
+          "stars": 1611,
+          "lang": "SCSS",
+          "license": "MIT",
+          "pushed": "2026-04-24",
+          "desc": "引一个样式表，页面上所有可疑 HTML（缺 alt、错用 ARIA、可点的 div）直接被高亮标注。",
+          "why": "思路极简却极狠，等于给网页拍一张 X 光片。",
+          "url": "https://ffoodd.github.io/a11y.css/",
+          "pick": true
+        },
+        {
+          "name": "Poline",
+          "repo": "meodai/poline",
+          "stars": 1258,
+          "lang": "TypeScript",
+          "license": "MIT",
+          "pushed": "2026-06-28",
+          "desc": "用极坐标在 HSL 空间插值生成色板，天然规避「取色等距却视觉不等距」的坑。",
+          "why": "生成结果有种不真实的漂亮，在线生成器本身就很好玩。",
+          "url": "https://meodai.github.io/poline/",
+          "pick": true
+        },
+        {
+          "name": "Contrast Grid",
+          "repo": "DirectedEdges/contrast-grid",
+          "stars": 240,
+          "lang": "JavaScript",
+          "license": "MIT",
+          "pushed": "2026-09-01",
+          "desc": "一次生成整组前景乘背景色的 WCAG 合规矩阵。",
+          "url": "https://contrast-grid.eightshapes.com/"
+        },
+        {
+          "name": "Colorblindly",
+          "repo": "oftheheadland/Colorblindly",
+          "stars": 416,
+          "lang": "JavaScript",
+          "license": "MIT",
+          "pushed": "2025-04-30",
+          "desc": "浏览器扩展，一键用 8 种色觉类型重看你的网站。",
+          "why": "「设计时看不见的失效」瞬间变得可见。"
+        },
+        {
+          "name": "Sim Daltonism",
+          "repo": "michelf/sim-daltonism",
+          "stars": 321,
+          "lang": "Swift",
+          "pushed": "2026-02-07",
+          "desc": "macOS / iOS 上的实时色盲取景器，能直接套在真实界面上看。"
+        },
+        {
+          "name": "TPGi CCAe",
+          "repo": "ThePacielloGroup/CCAe",
+          "stars": 533,
+          "lang": "JavaScript",
+          "license": "GPL-3.0",
+          "pushed": "2025-09-10",
+          "desc": "屏幕取色即测的对比度分析桌面工具。",
+          "url": "https://www.tpgi.com/color-contrast-checker/"
+        },
+        {
+          "name": "Atkinson Hyperlegible",
+          "repo": "googlefonts/atkinson-hyperlegible",
+          "stars": 326,
+          "lang": "HTML",
+          "license": "OFL-1.1",
+          "pushed": "2021-04-30",
+          "desc": "为低视力读者重绘字形差异的易辨字体。",
+          "why": "字体仓库已归档，字体本身仍在广泛使用，可直接下载。"
+        }
+      ]
+    },
+    {
+      "name": "创客与硬件",
+      "blurb": "能摸得着的无障碍：3D 打印、假肢、轮椅、听得见的游戏。",
+      "projects": [
+        {
+          "name": "BrailleRap",
+          "repo": "braillerap/BrailleRap",
+          "stars": 42,
+          "lang": "C",
+          "license": "CERN-OHL-P-2.0",
+          "pushed": "2026-06-13",
+          "desc": "3D 打印件加步进电机 DIY 盲文凸点打印机，把几千美元的设备压到 DIY 成本。",
+          "why": "仓库里有实物照片和完整硬件发布包，是真能造出来的机器。",
+          "url": "https://braillerap.readthedocs.io/",
+          "pick": true
+        },
+        {
+          "name": "Open Source Leg",
+          "repo": "neurobionics/opensourceleg",
+          "stars": 120,
+          "lang": "Python",
+          "license": "LGPL-2.1",
+          "pushed": "2026-09-16",
+          "desc": "密歇根大学开源动力假肢平台，膝踝假肢的软硬件栈全部可复现。",
+          "why": "把原本封闭昂贵的动力假肢做成了研究级开源基线。",
+          "url": "https://neurobionics.github.io/opensourceleg/",
+          "pick": true
+        },
+        {
+          "name": "open-rnet",
+          "repo": "redragonx/open-rnet",
+          "stars": 29,
+          "lang": "Python",
+          "license": "GPL-3.0",
+          "pushed": "2026-03-28",
+          "desc": "逆向电动轮椅的 R-Net CAN 总线，让使用者能自己修、自己改自己的轮椅。",
+          "why": "DEF CON 演讲级别的硬核逆向，把「维修权」落到了轮椅上。",
+          "pick": true
+        },
+        {
+          "name": "SoundRTS",
+          "repo": "soundmud/soundrts",
+          "stars": 46,
+          "lang": "Python",
+          "pushed": "2025-05-07",
+          "desc": "纯靠听觉玩的即时战略游戏，为盲人玩家从头设计的完整游戏。",
+          "url": "http://jlpo.free.fr/soundrts"
+        }
+      ]
+    },
+    {
+      "name": "学习与灵感",
+      "blurb": "规范和清单之外，那些看了会想动手的东西。",
+      "projects": [
+        {
+          "name": "WAI-ARIA APG",
+          "repo": "w3c/aria-practices",
+          "stars": 1356,
+          "lang": "HTML",
+          "pushed": "2026-09-30",
+          "desc": "ARIA 组件模式与可运行示例的权威参考。",
+          "why": "做任何交互组件之前，先来这里看一遍标准答案。",
+          "url": "https://www.w3.org/WAI/ARIA/apg/",
+          "pick": true
+        },
+        {
+          "name": "The A11Y Project",
+          "repo": "a11yproject/a11yproject.com",
+          "stars": 3900,
+          "lang": "Nunjucks",
+          "license": "Apache-2.0",
+          "pushed": "2026-08-31",
+          "desc": "社区驱动的无障碍入门知识库与自检清单。",
+          "url": "https://www.a11yproject.com/"
+        },
+        {
+          "name": "awesome-a11y",
+          "repo": "brunopulis/awesome-a11y",
+          "stars": 1993,
+          "license": "CC0-1.0",
+          "pushed": "2026-08-03",
+          "desc": "无障碍工具、规范与文章的精选中英清单。"
+        },
+        {
+          "name": "veraPDF",
+          "repo": "veraPDF/veraPDF-library",
+          "stars": 346,
+          "lang": "Java",
+          "license": "GPL-3.0",
+          "pushed": "2026-10-07",
+          "desc": "PDF/UA 与 PDF/A 合规校验的工业级开源实现。",
+          "url": "http://verapdf.org/software"
+        },
+        {
+          "name": "WhoCanUse",
+          "pushed": "2026-10-11",
+          "desc": "输入前景与背景色，实时展示低视力、色盲、强光等条件下「谁能看清」。",
+          "why": "把抽象的对比度数字，翻译成具体的人能不能看见。",
+          "url": "https://www.whocanuse.com/",
+          "pick": true
+        },
+        {
+          "name": "Inclusive Components",
+          "pushed": "2026-10-11",
+          "desc": "Heydon Pickering 的 UI 模式库，每个组件都配可交互演示与无障碍拆解。",
+          "url": "https://inclusive-components.design/"
+        },
+        {
+          "name": "Overlay Fact Sheet",
+          "pushed": "2026-10-11",
+          "desc": "关于「无障碍 overlay 插件为何无效」的联署事实清单，页面本身就是一份宣言。",
+          "why": "选供应商之前值得先读，能省下一大笔冤枉钱。",
+          "url": "https://overlayfactsheet.com/",
+          "pick": true
+        },
+        {
+          "name": "e-NABLE",
+          "pushed": "2026-10-11",
+          "desc": "3D 打印义肢与辅助手的全球志愿者网络，海量实拍照片与开源手部设计。",
+          "url": "https://enablingthefuture.org/"
+        },
+        {
+          "name": "Open Bionics",
+          "pushed": "2026-10-11",
+          "desc": "把义肢做成科幻道具级视觉产品的标杆，值得所有硬件团队看一眼。",
+          "url": "https://www.openbionics.com/"
+        },
+        {
+          "name": "Hackaday 辅助技术项目流",
+          "pushed": "2026-10-11",
+          "desc": "持续更新的创客辅助技术项目瀑布，找「酷硬件」的最佳猎场。",
+          "url": "https://hackaday.io/projects?tag=assistive%20technology"
+        }
+      ]
+    }
+  ]
+}

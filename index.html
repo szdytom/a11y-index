@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>无障碍开源项目 · 看起来很酷的那一批</title>
+<meta name="description" content="一份经过核实的中文策展清单：2026 年仍然活跃、而且看起来真的很酷的无障碍开源项目。页面本身按 WCAG 2.2 AA 构建。">
+<meta name="color-scheme" content="light dark">
+<!-- 内联 SVG 图标：盲文点字「a」（点 1），零外部请求 -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23171B1D'/%3E%3Ccircle cx='12' cy='9' r='3.2' fill='%23E9A800'/%3E%3Ccircle cx='12' cy='16' r='2.4' fill='%23565D60'/%3E%3Ccircle cx='12' cy='23' r='2.4' fill='%23565D60'/%3E%3Ccircle cx='20' cy='9' r='2.4' fill='%23565D60'/%3E%3Ccircle cx='20' cy='16' r='2.4' fill='%23565D60'/%3E%3Ccircle cx='20' cy='23' r='2.4' fill='%23565D60'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="masthead">
+  <div class="wrap masthead__grid">
+    <div class="masthead__title">
+      <p class="eyebrow">策展清单 · 数据快照 <time datetime="2026-10-11">2026-10-11</time></p>
+      <h1>很酷的<br><em>无障碍</em>开源项目</h1>
+      <p class="lede">
+        不是"公益化清单"。这些项目自己就足够好看、好用、好拆——要么技术路线新，
+        要么有一个让人想立刻跑起来看的界面。共 <strong id="hero-count">—</strong> 个，全部核实过许可证与最近推送时间。
+      </p>
+    </div>
+
+    <section class="console" aria-labelledby="console-h">
+      <h2 id="console-h" class="console__h">
+        环境信号台
+        <span class="console__sub">这一页正在读取你系统的无障碍设置</span>
+      </h2>
+      <dl class="sig" id="sig"></dl>
+      <p class="console__foot">
+        改一下你系统的配色、对比度或动效设置，下面每一项都会立刻跟着变。
+      </p>
+    </section>
+  </div>
+</header>
+
+<nav class="tools" aria-labelledby="tools-h">
+  <h2 id="tools-h" class="vh">筛选与排序</h2>
+  <div class="wrap tools__grid">
+    <div class="tools__group" role="group" aria-label="按分类筛选">
+      <span class="tools__label" id="cat-label">分类</span>
+      <div class="chips" id="chips" aria-describedby="cat-label"></div>
+    </div>
+
+    <div class="tools__group">
+      <label class="tools__label" for="q">搜索</label>
+      <input id="q" type="search" name="q" placeholder="项目名、语言、用途…" autocomplete="off" spellcheck="false">
+    </div>
+
+    <div class="tools__group tools__group--sort">
+      <label class="tools__label" for="sort">排序</label>
+      <select id="sort" name="sort">
+        <option value="stars">星标最多</option>
+        <option value="pushed">最近还在更新</option>
+        <option value="name">按名称</option>
+      </select>
+      <button type="button" id="reset" class="btn-reset">重置</button>
+    </div>
+
+    <div class="tools__group">
+      <span class="tools__label" id="pick-label">推荐</span>
+      <label class="switch" for="pick-only">
+        <input type="checkbox" id="pick-only" name="pick-only" aria-describedby="pick-hint">
+        <span class="switch__box" aria-hidden="true"></span>
+        <span class="switch__text">只看编辑部推荐</span>
+      </label>
+      <span id="pick-hint" class="vh">勾选后只显示带「推荐」标记的项目。</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+  <noscript>
+    <div class="wrap">
+      <p class="empty">
+        这个页面的项目列表由 JavaScript 渲染，你当前的浏览器关闭了脚本。
+        完整清单在 <code>data.json</code> 里，纯文本可读；
+        或参照 <code>README.md</code> 直接用文件打开查看。
+      </p>
+    </div>
+  </noscript>
+  <div class="wrap layout">
+
+    <aside class="key" aria-labelledby="key-h">
+      <h2 id="key-h">标记说明</h2>
+      <p class="key__lead">
+        每个分类有一个盲文点字标记。圆点排列取自真实的六点制盲文，<br>不是装饰图案。
+      </p>
+      <ul class="key__list" id="key-list"></ul>
+      <dl class="key__tags">
+        <dt><span class="tag tag--rec">推荐</span></dt>
+        <dd>编辑部推荐：技术路线新，或有一个让人想立刻跑起来看的界面。</dd>
+        <dt><span class="tag tag--new">新</span></dt>
+        <dd>近 30 天内有推送。</dd>
+        <dt><span class="tag tag--stale">停更</span></dt>
+        <dd>超过 12 个月没有推送，或仓库已归档。仍然值得读，但别直接上生产。</dd>
+      </dl>
+    </aside>
+
+    <section aria-labelledby="results-h" class="results">
+      <h2 id="results-h" class="vh">项目列表</h2>
+      <ul class="grid" id="grid"></ul>
+      <p class="empty" id="empty" hidden>
+        没有匹配的项目。试着清空搜索框，或点上面的"重置"。
+      </p>
+    </section>
+
+  </div>
+
+  <section class="method" aria-labelledby="method-h">
+    <div class="wrap">
+      <h2 id="method-h">这一页自己是怎么做的</h2>
+      <p class="method__lead">清单讲无障碍，页面本身也是无障碍的。几个具体做法：</p>
+      <ul class="method__list">
+        <li><strong>语义结构</strong>：跳转链接、<code>header / nav / main / aside / footer</code> 地标、<code>h1–h3</code> 层级连续，结果是一个真正的列表。</li>
+        <li><strong>键盘可用</strong>：Tab 顺序即视觉顺序；焦点环 3px 实线加偏移，从不用 <code>outline: none</code> 抹掉。</li>
+        <li><strong>对比度</strong>：正文与背景对比度均 ≥ 7:1，次级文字 ≥ 4.5:1，界面上限标签 ≥ 4.5:1。</li>
+        <li><strong>状态可感知</strong>：筛选结果数用 <code>role="status"</code> 播报；0 结果时给出下一步怎么做，而不是只说“空”。</li>
+        <li><strong>判断有依据</strong>：星标、语言、许可证、是否停更全部标在卡片上，正文里说“酷”的地方都写清了为什么。</li>
+        <li><strong>尊重偏好</strong>：<code>prefers-reduced-motion</code> 关掉全部过渡；<code>forced-colors</code> 下改用系统颜色与边框；<code>prefers-contrast: more</code> 下文字与边框加重。</li>
+        <li><strong>不依赖颜色</strong>：星标、语言、许可证都有文字标签，色块只做辅助。</li>
+        <li><strong>触控目标</strong>：所有可点元素最小 44×44 CSS 像素。</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <p>
+      数据于 <time datetime="2026-10-11">2026-10-11</time> 从 GitHub 公开 API 抓取，
+      星标数为当日快照，会随时间变化。许可证以仓库标注为准，商用前请自行复核。
+    </p>
+    <p>
+      本页无追踪、无外链字体、无第三方脚本。清单文件：
+      <code>data.json</code>（机读）· <code>data.js</code>（本页所用）
+    </p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
